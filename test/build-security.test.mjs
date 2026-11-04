@@ -160,6 +160,12 @@ test("every top-level folder is either public on purpose or denied to the web se
   assert.match(read(".gitignore"), /^node_modules\/$/m, "dependencies stay out of the repository");
 });
 
+test("etags match without a regex on a visitor header", () => {
+  const srv = read("server.mjs");
+  assert.match(srv, /etagMatches\(req\.headers\["if-none-match"\]/, "server.mjs: match etags with etagMatches from lib/http.js");
+  assert.doesNotMatch(srv, /split\(\/\\s/, "server.mjs: no regex split on a visitor header (a hostile one burns CPU)");
+});
+
 test("no secrets committed: keys, tokens, macaroons or private keys in any tracked file", async () => {
   const { execFileSync } = await import("node:child_process");
   const tracked = execFileSync("git", ["ls-files"], { cwd: root, encoding: "utf8" }).split("\n").filter((f) => f && !/\.(png|jpe?g|gif|ico|woff2?|ttf|pdf|zip)$/i.test(f) && !f.startsWith("yebente/app/assets/"));
