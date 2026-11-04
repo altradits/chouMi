@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-BMGEnj9r3h8zcFDER0S8np31ZVYVQGr9qprnte4mw10='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-W8Pno+ls0yOk3Ev5WWKrjjQenQXH/nLdYja28xk51Xg='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
 <script src="/assets/report.js"></script>
 <link rel="canonical" href="https://altradits.com/va">
 <title>Tasks · Altradits</title>
@@ -636,8 +636,8 @@ async function showDone(item, order) {
       <h2 id="mTitle">Order confirmed</h2>
       <p><b>${esc(item.name)}</b> · ${money(item.price)} paid</p>
       <p>Delivery: ${esc(info.delivery || item.delivery)}</p>
-      ${info.phone ? `<div class="urgent"><b>🚨 Urgent order ${esc(info.ref)}: tell Stanley now</b>
-        <p>Your job is already at the front of the queue. Message or call so the standby team starts right away.</p>
+      ${info.phone ? `<div class="urgent"><b>Urgent order ${esc(info.ref)}: message Stanley</b>
+        <p>Your job is first in the queue. Message or call Stanley so the standby team can start.</p>
         <div class="actions" style="justify-content:center"><a class="btn btc" href="https://wa.me/${esc(info.phone.replace(/\D/g, ""))}?text=${msg}" target="_blank" rel="noopener">WhatsApp ${esc(info.phone)}</a><a class="btn" href="tel:${esc(info.phone)}">Call</a></div></div>` : ""}
       ${!info.emailed && info.name ? orderNameBox(info.name, true) : ""}
       <p>${info.emailed ? "Your receipt and portal link are in your inbox." : "Save your portal link or your order name: either one is how you send files, track the work, collect it and get your receipt."}</p>

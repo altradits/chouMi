@@ -254,10 +254,10 @@ export const PACKAGES = [
     pitch: "For one recurring job you want off your plate.",
     features: ["15 hours a month", "1 service area", "Replies within one business day", "Monthly summary"] },
   { id: "core", name: "Core", price: 749, hours: 35, popular: true,
-    pitch: "For owners who want a dependable right hand.",
+    pitch: "For owners handing off several jobs every week.",
     features: ["35 hours a month", "Up to 3 service areas", "Same-day replies", "Weekly status note", "Shared task board"] },
   { id: "partner", name: "Partner", price: 1390, hours: 70,
-    pitch: "Fractional operations: inbox to invoices to social.",
+    pitch: "Your inbox, invoices and social media, run every day.",
     features: ["70 hours a month", "All service areas", "Priority same-day turnaround", "Daily summary + Monday plan", "Monthly strategy call"] },
 ];
 
@@ -275,7 +275,7 @@ export const STANDBY_FREELANCERS = 100;
 
 export const GUARANTEES = [
   { name: "Fixed price, fixed scope", text: "You pay the price shown for exactly what's listed. No hidden fees, no surprises." },
-  { name: "Fixed-scope promise", text: "If what I deliver doesn't match the proposal, I fix it free for 14 days after handover." },
+  { name: "14-day fix", text: "If what I deliver doesn't match the card or proposal, I fix it free for 14 days after handover." },
   { name: "Cancel any month", text: "Retainers are month to month. Unused hours roll over once." },
 ];
 
