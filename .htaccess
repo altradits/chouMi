@@ -1,0 +1,27 @@
+# CLOUDLINUX PASSENGER CONFIGURATION BEGIN (placeholder: the host writes the
+# real block with its own paths when this app is deployed; every line here
+# stays a comment until then, so it can never break a server).
+# PassengerAppRoot "/home/USER/domains/example.com/public_html"
+# PassengerBaseURI "/"
+# PassengerNodejs "/home/USER/nodevenv/domains/example.com/public_html/24/bin/node"
+# PassengerAppType node
+# PassengerStartupFile app.cjs
+# CLOUDLINUX PASSENGER CONFIGURATION END
+
+# Server code and project files are never web content.
+<FilesMatch "^(\.env(\..*)?|server\.mjs|app\.cjs|README\.md|CONTRIBUTING\.md|SECURITY\.md|LICENSE|package(-lock)?\.json)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Git metadata, local runtime state and the extension source are never web content.
+RedirectMatch 404 ^/\.git(?:/|$)
+RedirectMatch 404 ^/\.data(?:/|$)
+RedirectMatch 404 ^/\.github(?:/|$)
+RedirectMatch 404 ^/\.claude(?:/|$)
+RedirectMatch 404 ^/apply-extension(?:/|$)
