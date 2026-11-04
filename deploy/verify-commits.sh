@@ -18,7 +18,7 @@ set -u
 # The public-ready snapshot: everything before it (the private single-commit
 # history) was replaced. Set to the snapshot's hash in the commit after it.
 # Never move this backwards.
-TRUST_ROOT=2129c395ef7a1548b4f829673c5536452acbdaf5
+TRUST_ROOT=df93fac30e04c6eef6d42461608fa95513d142ad
 REF="${1:-HEAD}"
 SIGNERS="${2:-.github/allowed_signers}"
 

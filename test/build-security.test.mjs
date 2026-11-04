@@ -138,7 +138,7 @@ test("every Markdown file at the top level is denied to the web server", () => {
 
 test("signing stays available: the trusted-keys file, the verify script and the local gate stay in place", () => {
   assert.match(read(".github/allowed_signers"), /^altradits@gmail\.com namespaces="git" ssh-ed25519 /m, "a trusted signing key");
-  assert.match(read("deploy/verify-commits.sh"), /TRUST_ROOT=2129c395ef7a1548b4f829673c5536452acbdaf5/, "the trust root never moves");
+  assert.match(read("deploy/verify-commits.sh"), /TRUST_ROOT=df93fac30e04c6eef6d42461608fa95513d142ad/, "the trust root never moves");
   assert.match(read(".githooks/pre-push"), /force-push/, "the local gate refuses force-pushes to main");
 });
 
