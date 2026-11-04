@@ -71,7 +71,7 @@ function render() {
         <p>Share your link. When they become a client, you get ${D.referral.pct}% of their first month as credit.</p>
         <code id="refUrl">${esc(D.referral.url)}</code>
         <div class="row"><button class="btn" id="copyRef">Copy link</button>
-        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent("I use Altradits for my admin and social media. They're great: " + D.referral.url)}">Share on WhatsApp</a></div>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent("I hand off work to Altradits: fixed prices, paid in Bitcoin. Here's my link: " + D.referral.url)}">Share on WhatsApp</a></div>
         ${D.referral.creditUsd ? `<p>Your credit: <b>$${D.referral.creditUsd}</b></p>` : ""}
         ${D.referral.codes?.length ? `<p class="note">Checkout code(s): ${D.referral.codes.map((cd) => `<code>${esc(cd)}</code>`).join(", ")}</p>` : ""}</div>
       ${D.onboarding ? `<details class="card soft"><summary>Onboarding details</summary>${onboardingForm().replace('class="card"', 'class=""')}</details>` : ""}

@@ -495,7 +495,7 @@ export const KITS = [
     files: [{ name: "inbox-zero-in-60-minutes.pdf", type: "pdf", md: INBOX }],
     done: ["q-inbox-cleanup", "inbox-calendar"],
     nurture: [
-      { day: 2, subject: "The one inbox habit that sticks", line: "Set up the five filters from step 5 and half your new mail never reaches your inbox. Rather have it done? We'll clear it today." },
+      { day: 2, subject: "The one inbox habit that sticks", line: "Set up the five filters from step 5 and routine mail skips your inbox automatically. Rather have it done? We'll clear it today." },
       { day: 5, subject: "Want it done by tonight?", line: "Haven't found the 60 minutes yet? Hand it over and we'll clear your inbox today." },
     ],
   },
@@ -527,11 +527,11 @@ export const KITS = [
     id: "replies", title: "Customer Reply Playbook", pillar: "growth",
     struggle: "Awkward complaints and slow replies",
     promise: "Reply to anything in under a minute, even when things go wrong.",
-    inside: ["The three-part reply that works every time", "Response-time standards", "20 ready-to-send replies, from price questions to angry customers", "How to save them in Gmail, Outlook, WhatsApp and Meta"],
+    inside: ["The three-part reply for any message", "Response-time standards", "20 ready-to-send replies, from price questions to angry customers", "How to save them in Gmail, Outlook, WhatsApp and Meta"],
     files: [{ name: "customer-reply-playbook.pdf", type: "pdf", md: REPLIES }],
     done: ["q-reply-templates", "q-reviews", "customer-support"],
     nurture: [
-      { day: 2, subject: "Acknowledge first, answer second", line: "Reply within 4 working hours, even a quick 'got it', and most complaints never start. Want yours written for you? We'll do it today." },
+      { day: 2, subject: "Acknowledge first, answer second", line: "Reply within 4 working hours, even a quick 'got it', and customers know they've been heard. Want yours written for you? We'll do it today." },
       { day: 5, subject: "Your own reply templates, written today", line: "We'll write 10 reply templates in your voice today." },
     ],
   },
@@ -543,7 +543,7 @@ export const KITS = [
     files: [{ name: "cold-outreach-starter-kit.pdf", type: "pdf", md: OUTREACH }, { name: "lead-research-sheet.csv", type: "csv", body: leadSheet }],
     done: ["q-leads", "q-cold-email", "lead-generation"],
     nurture: [
-      { day: 2, subject: "Why most cold emails get ignored", line: "One specific reason per lead roughly doubles replies. Rather skip the research? We'll do it today." },
+      { day: 2, subject: "Why most cold emails get ignored", line: "Give each lead one specific reason you're writing, and your message stops reading like a template. Rather skip the research? We'll do it today." },
       { day: 5, subject: "25 researched leads by tonight", line: "Skip the research: 25 leads that fit your business, delivered today." },
     ],
   },
@@ -555,7 +555,7 @@ export const KITS = [
     files: [{ name: "hire-your-first-assistant-kit.pdf", type: "pdf", md: HIRING }, { name: "candidate-scorecard.csv", type: "csv", body: scorecard }],
     done: ["q-job-post", "q-cv-screen", "hr-recruiting"],
     nurture: [
-      { day: 2, subject: "The keyword trick that saves hours", line: "The keyword in your job ad filters out half the applications in seconds. Rather hand it over? We'll write it today." },
+      { day: 2, subject: "The keyword trick that saves hours", line: "The keyword in your job ad shows in seconds who skipped the instructions. Rather hand it over? We'll write it today." },
       { day: 5, subject: "Your job ad, written and posted today", line: "We'll write and post your job ad today." },
     ],
   },
